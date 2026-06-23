@@ -7,7 +7,7 @@ function Login({ onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (username === "admin" && password === "admin123") {
+    if (username === "flamingo" && password === "Gokul@1512#") {
       localStorage.setItem("loggedIn", "true");
       onLogin();
     } else {
