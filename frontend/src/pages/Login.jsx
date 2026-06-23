@@ -17,72 +17,47 @@ function Login({ onLogin }) {
 
   return (
     <div className="login-page">
-      <div className="login-left">
-        <div className="brand-content">
-          <h1>Flamingo Healthcare CRM</h1>
-          <p>
-            Centralized Patient Management & Healthcare Operations Platform
-          </p>
+      <div className="overlay"></div>
 
-          <div className="feature-list">
-            <div className="feature-item">
-              ✓ Patient Management
-            </div>
+      <div className="floating floating-1"></div>
+      <div className="floating floating-2"></div>
+      <div className="floating floating-3"></div>
 
-            <div className="feature-item">
-              ✓ Appointment Scheduling
-            </div>
-
-            <div className="feature-item">
-              ✓ WhatsApp Communication
-            </div>
-
-            <div className="feature-item">
-              ✓ Analytics & Reports
-            </div>
-          </div>
+      <div className="login-card">
+        <div className="logo-circle">
+          FH
         </div>
-      </div>
 
-      <div className="login-right">
-        <form className="login-card" onSubmit={handleSubmit}>
-          <div className="login-header">
-            <div className="logo-circle">
-              FH
-            </div>
+        <h1>Flamingo Healthcare</h1>
+        <p>Patient Engagement CRM Platform</p>
 
-            <h2>Welcome Back</h2>
-            <p>Sign in to continue</p>
-          </div>
-
-          <div className="form-group">
-            <label>Username</label>
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
             <input
               type="text"
-              placeholder="Enter Username"
+              placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
 
-          <div className="form-group">
-            <label>Password</label>
+          <div className="input-group">
             <input
               type="password"
-              placeholder="Enter Password"
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
-          <button type="submit" className="login-btn">
+          <button type="submit">
             Sign In
           </button>
-
-          <div className="login-footer">
-            Flamingo Healthcare Centre
-          </div>
         </form>
+
+        <div className="footer-text">
+          Flamingo Healthcare Centre • Ambattur, Chennai
+        </div>
       </div>
     </div>
   );
